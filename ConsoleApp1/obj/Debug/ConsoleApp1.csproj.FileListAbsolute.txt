@@ -1,0 +1,30 @@
+D:\Системное программирование\22.02.23\BusesInTown\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+D:\Системное программирование\22.02.23\BusesInTown\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+D:\Системное программирование\22.02.23\BusesInTown\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+D:\Системное программирование\22.02.23\BusesInTown\ConsoleApp1\obj\Debug\ConsoleApp1.csprojAssemblyReference.cache
+D:\Системное программирование\22.02.23\BusesInTown\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+D:\Системное программирование\22.02.23\BusesInTown\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+D:\Системное программирование\22.02.23\BusesInTown\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+D:\Системное программирование\Новая папка (2)\BusesInTown\BusesInTown\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+D:\Системное программирование\Новая папка (2)\BusesInTown\BusesInTown\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+D:\Системное программирование\Новая папка (2)\BusesInTown\BusesInTown\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+D:\Системное программирование\Новая папка (2)\BusesInTown\BusesInTown\ConsoleApp1\obj\Debug\ConsoleApp1.csprojAssemblyReference.cache
+D:\Системное программирование\Новая папка (2)\BusesInTown\BusesInTown\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+D:\Системное программирование\Новая папка (2)\BusesInTown\BusesInTown\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+D:\Системное программирование\Новая папка (2)\BusesInTown\BusesInTown\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+D:\Системное программирование\Новая папка (2)\BusesInTown\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+D:\Системное программирование\Новая папка (2)\BusesInTown\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+D:\Системное программирование\Новая папка (2)\BusesInTown\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+D:\Системное программирование\Новая папка (2)\BusesInTown\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.AssemblyReference.cache
+D:\Системное программирование\Новая папка (2)\BusesInTown\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.SuggestedBindingRedirects.cache
+D:\Системное программирование\Новая папка (2)\BusesInTown\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+D:\Системное программирование\Новая папка (2)\BusesInTown\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+D:\Системное программирование\Новая папка (2)\BusesInTown\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+D:\Системное программирование\git\System-programming-DZ7\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+D:\Системное программирование\git\System-programming-DZ7\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+D:\Системное программирование\git\System-programming-DZ7\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+D:\Системное программирование\git\System-programming-DZ7\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.AssemblyReference.cache
+D:\Системное программирование\git\System-programming-DZ7\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.SuggestedBindingRedirects.cache
+D:\Системное программирование\git\System-programming-DZ7\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+D:\Системное программирование\git\System-programming-DZ7\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+D:\Системное программирование\git\System-programming-DZ7\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
