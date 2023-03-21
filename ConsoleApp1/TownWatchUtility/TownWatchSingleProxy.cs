@@ -6,9 +6,9 @@ namespace ConsoleApp1.TownWatchUtility
 {
     internal class TownWatchSingleProxy
     {
-        private Queue<Action> _actionQueue;
-        private Thread _currentThread;  
-        private Object _actionQueueLockObj;
+        private readonly Queue<Action> _actionQueue;
+        private readonly Thread _currentThread;
+        private readonly Object _actionQueueLockObj;
         protected bool _isRunning;
 
 

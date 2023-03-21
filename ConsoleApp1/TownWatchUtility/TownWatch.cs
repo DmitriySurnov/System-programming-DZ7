@@ -1,98 +1,69 @@
-﻿using BusesInTown.Buses;
-using BusesInTown.Messages;
+﻿using BusesInTown.Messages;
+using System;
 using System.Collections.Generic;
 using System.Threading;
 
 namespace BusesInTown.TownWatchs
 {
-    internal static class TownWatch
+    internal class TownWatch
     {
-        private static List<Message> _ms1 = new List<Message>();
-        private static List<Buse> _ms2 = new List<Buse>();
-        private static List<string> _message = new List<string>();
-        static private readonly object _ms1LockObj = new object();
-        static private readonly object _ms2LockObj = new object();
-        static private readonly object _messageLockObj = new object();
-        public static bool Stop = false;
-
-        public static void AddMs1(Buse buse, int numberMinutesToStop)
+        private readonly List<Message> _listMessage;
+        private readonly object _listMessageLockObj;
+        private bool _stop;
+        public TownWatch() {
+            _listMessage = new List<Message>();
+            _listMessageLockObj = new object();
+            _stop = true;
+        }
+        public void Add(Action actionToInvoke, int numberMinutesToStop)
         {
-            lock (_ms1LockObj)
+            lock (_listMessageLockObj)
             {
-                _ms1.Add(new Message(buse, numberMinutesToStop));
+                _listMessage.Add(new Message(actionToInvoke, numberMinutesToStop));
             }
         }
 
-        public static void AddMessage(string tet)
+        public void Start()
         {
-            lock (_messageLockObj)
-            {
-                _message.Add(tet);
-            }
+            if (!_stop)
+                return;
+            _stop = false;
+            new Thread(Countdown).Start();
+        }
+        public void Stop()
+        {
+            _stop = true;
+            lock (_listMessageLockObj)
+                _listMessage.Clear();
         }
 
-        public static string GetMessage( )
+        private void Countdown()
         {
-            string temp = "";
-            lock (_messageLockObj)
+            while (!_stop)
             {
-                if (_message.Count > 0)
-                {
-                    temp = _message[0];
-                    _message.RemoveAt(0);
-                }
-            }
-            return temp;
-        }
-
-        public static bool GetMs2( Buse buse)
-        {
-            bool temp = false;
-            lock (_ms2LockObj)
-            {
-                if (_ms2.Count > 0)
-                {
-                    if (buse == _ms2[0])
-                    {
-                        temp = true;
-                        _ms2.RemoveAt(0);
-                    }
-                }
-            }
-            return temp;
-        }
-
-        public static void StartTownWatch()
-        {
-            while (!Stop)
-            {
-                if (_ms1.Count == 0)
+                if (_listMessage.Count == 0)
                 {
                     Thread.Sleep(1000);
                     continue;
-
                 }
-                lock (_ms1LockObj)
+                lock (_listMessageLockObj)
                 {
                     int ID = 0;
-                    for (int i = 1; i < _ms1.Count; i++)
+                    for (int i = 1; i < _listMessage.Count; i++)
                     {
-                        if (_ms1[ID] > _ms1[i])
+                        if (_listMessage[ID] > _listMessage[i])
                             ID = i;
                     }
-                    Thread.Sleep(_ms1[ID].GetNumberMinutesToStop() * 100);
-                    for (int i = 0; i < _ms1.Count; i++)
+                    Thread.Sleep(_listMessage[ID].GetNumberMinutesToStop() * 1000);
+                    for (int i = 0; i < _listMessage.Count; i++)
                     {
-                        _ms1[i] -= _ms1[ID];
+                        _listMessage[i] -= _listMessage[ID];
                     }
-                    
-                    lock (_ms2LockObj)
-                    {
-                        _ms2.Add(_ms1[ID].GetBuse());
-                    }
-                    _ms1.RemoveAt(ID);
+                    _listMessage[ID].Action();
+                    _listMessage.RemoveAt(ID);
                 }
             }
         }
+
     }
 }
